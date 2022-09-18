@@ -1,0 +1,39 @@
+<nav class="page-section">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+        <span aria-hidden="true">
+          <i class="fas fa-chevron-left"></i>
+        </span>
+      </a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link" href="javascript:void(0)">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="javascript:void(0)">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="javascript:void(0)">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" aria-label="Next">
+        <span aria-hidden="true">
+          <i class="fas fa-chevron-right"></i>
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<% if(currentPage !== 1 && previousPage !== 1) { %>
+<a href="?page=1">1</a>
+<% } %> <% if(hasPreviousPage) { %>
+<a href="?page=<%= previousPage %>"><%= previousPage %></a>
+<% } %>
+<a href="?page=<%= currentPage %>" class="active"><%= currentPage %></a>
+<% if(hasNextPage) { %>
+<a href="?page=<%= nextPage %>"><%= nextPage %></a>
+<% } %> <% if(lastPage !== currentPage && nextPage !== lastPage) { %>
+<a href="?page=<%= lastPage %>"><%= lastPage %></a>
+<% } %>
