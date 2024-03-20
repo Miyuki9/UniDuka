@@ -8,15 +8,6 @@ const User = require("../models/user");
 const PASS = process.env.PASS;
 const USER = process.env.USER;
 
-// const transporter = nodemailer.createTransport(
-//   sendgridTransport({
-//     auth: {
-//       api_key:
-//         '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'
-//     }
-//   })
-// );
-
 const transporter = nodemailer.createTransport({
   host: "smtp-mail.outlook.com.",
   secureConnection: false,
